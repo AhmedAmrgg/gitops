@@ -16,7 +16,7 @@ spec:
       values: |
       config:
         clients:
-         - url: http://loki-gateway.promtail.svc.cluster.local
+         - url: http://loki-gateway.loki.svc.cluster.local
   syncPolicy:
     automated:
       prune: true
