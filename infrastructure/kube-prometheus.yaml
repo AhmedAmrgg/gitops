@@ -10,6 +10,15 @@ spec:
     repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: 77.0.2
     helm:
+      values: |
+        grafana:
+          ingress:
+            hosts: 
+              - grafana.example.com
+            enabled: true
+            ingressClassName: alb
+
+      
       releaseName: kube-prometheus-stack
   destination:
     server: "https://kubernetes.default.svc"
@@ -17,3 +26,5 @@ spec:
   syncPolicy:
     syncOptions:
       - ServerSideApply=true
+
+grafana.ingress.hosts
