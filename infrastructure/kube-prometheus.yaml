@@ -27,4 +27,3 @@ spec:
     syncOptions:
       - ServerSideApply=true
 
-grafana.ingress.hosts
