@@ -14,9 +14,9 @@ spec:
     chart: promtail
     helm:
       values: |
-      config:
-        clients:
-         - url: http://loki-gateway.loki.svc.cluster.local
+        config:
+          clients:
+          - url: http://loki-gateway.loki.svc.cluster.local
   syncPolicy:
     automated:
       prune: true
