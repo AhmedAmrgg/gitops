@@ -25,6 +25,7 @@ spec:
               - prometheus.example.com
             enabled: true
             ingressClassName: alb
+            servicePort: 8081
       releaseName: kube-prometheus-stack
   destination:
     server: "https://kubernetes.default.svc"
