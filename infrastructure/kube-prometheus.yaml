@@ -19,8 +19,12 @@ spec:
               - grafana.example.com
             enabled: true
             ingressClassName: alb
-
-      
+        prometheus: 
+          ingress:
+            hosts:
+              - prometheus.example.com
+            enabled: true
+            ingressClassName: alb
       releaseName: kube-prometheus-stack
   destination:
     server: "https://kubernetes.default.svc"
@@ -28,4 +32,5 @@ spec:
   syncPolicy:
     syncOptions:
       - ServerSideApply=true
+
 
